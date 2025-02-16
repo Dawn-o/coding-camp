@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cryptocy</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <h1><a href="#">Cryptocy</a></h1>
+          <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul>
+            <li><a href="#market">Market Updates</a></li>
+            <li><a href="#news">Latest News</a></li>
+            <li><a href="#education">Learn Crypto</a></li>
+          </ul>
+          <ol class="social-link">
+            <li>
+              <a href="https://github.com/dawn-o" target="_blank">
+                <img src="assets/icons/github.svg" />
+              </a>
+              <a
+                href="https://linkedin.com/in/muhammad-rushelasli"
+                target="_blank"
+              >
+                <img src="assets/icons/linkedin.svg" />
+              </a>
+              <a href="mailto:contact@rushel.my.id" target="_blank">
+                <img src="assets/icons/mail.svg" />
+              </a>
+            </li>
+          </ol>
+        </nav>
+        <div class="mobile-nav">
+          <div class="mobile-nav-header">
+            <h2><a href="#">Cryptocy</a></h2>
+          </div>
+
+          <nav class="mobile-nav-menu">
+            <ul>
+              <li><a href="#market">Market Updates</a></li>
+              <li><a href="#news">Latest News</a></li>
+              <li><a href="#education">Learn Crypto</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="overlay"></div>
+      </header>
+
+      <main>
+        <section id="home">
+          <div class="hero-section">
+            <div class="cta-content">
+              <h1>
+                LEARN & <br />
+                TRACK <span>Crypto</span>
+              </h1>
+              <p>
+                Your trusted source for cryptocurrency news, insights, <br />
+                and real-time market data tracking.
+              </p>
+              <a href="#market" class="btn">EXPLORE MORE</a>
+            </div>
+            <div class="coin-list">
+              <div class="coin">
+                <img src="assets/images/bitcoin.png" />
+                <div>
+                  <h3>$ <span id="bitcoin"></span></h3>
+                  <p>Bitcoin</p>
+                </div>
+              </div>
+              <div class="coin">
+                <img src="assets/images/ethereum.png" />
+                <div>
+                  <h3>$ <span id="ethereum"></span></h3>
+                  <p>Ethereum</p>
+                </div>
+              </div>
+              <div class="coin">
+                <img src="assets/images/dogecoin.png" />
+                <div>
+                  <h3>$ <span id="dogecoin"></span></h3>
+                  <p>Dogecoin</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="market">
+          <div class="section-title">
+            <h2>Market Updates</h2>
+            <p>Real-time cryptocurrency market data and analysis</p>
+          </div>
+
+          <div class="market-section">
+            <div class="market-container">
+              <div class="market-stats">
+                <div class="stat-card">
+                  <h3>Market Cap</h3>
+                  <p id="global-mcap">Loading...</p>
+                  <span id="global-mcap-change" class="change">Loading...</span>
+              </div>
+                <div class="stat-card">
+                  <h3>24h Volume</h3>
+                  <p id="global-volume">Loading...</p>
+                </div>
+                <div class="stat-card">
+                  <h3>BTC Dominance</h3>
+                  <p id="btc-dominance">Loading...</p>
+                </div>
+              </div>
+
+              <div class="crypto-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">Coin</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">24h Change</th>
+                      <th scope="col">Market Cap</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <img src="assets/images/bitcoin.png" alt="BTC" />
+                        Bitcoin (BTC)
+                      </td>
+                      <td>$<span id="bitcoin-price"></span></td>
+                      <td><span data-coin="bitcoin-change"></span></td>
+                      <td>$<span data-coin="bitcoin-mcap"></span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="assets/images/ethereum.png" alt="ETH" />
+                        Ethereum (ETH)
+                      </td>
+                      <td>$<span id="ethereum-price"></span></td>
+                      <td><span data-coin="ethereum-change"></span></td>
+                      <td>$<span data-coin="ethereum-mcap"></span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="assets/images/dogecoin.png" alt="DOGE" />
+                        Dogecoin (DOGE)
+                      </td>
+                      <td>$<span id="dogecoin-price"></span></td>
+                      <td><span data-coin="dogecoin-change"></span></td>
+                      <td>$<span data-coin="dogecoin-mcap"></span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="news">
+          <div class="section-title">
+            <h2>Latest Crypto News</h2>
+            <p>
+              Stay updated with the latest cryptocurrency trends and updates
+            </p>
+          </div>
+
+          <div class="article-section">
+            <div class="article-container">
+              <article class="crypto-article">
+                <div class="article-content">
+                  <h2>
+                    Bitcoin price today: steadies at $104k after Trump's
+                    SEC-driven rally
+                  </h2>
+                  <div class="article-image">
+                    <img
+                      src="assets/articles/bitcoin.jpg"
+                      alt="Bitcoin price chart"
+                    />
+                  </div>
+                  <div class="article-text">
+                    <p>
+                      Bitcoin's price has stabilized around the $104,000 mark
+                      following a significant rally triggered by the SEC's
+                      recent announcements and former President Trump's comments
+                      on cryptocurrency regulations.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="crypto-article">
+                <div class="article-content">
+                  <h2>Ethereum (ETH) Brutally Underperforms Against XRP</h2>
+                  <div class="article-image">
+                    <img
+                      src="assets/articles/ethereum.webp"
+                      alt="Ethereum price chart"
+                    />
+                  </div>
+                  <div class="article-text">
+                    <p>
+                      Ethereum's performance has shown significant
+                      underperformance compared to XRP in recent market
+                      movements, raising concerns among investors about its
+                      short-term price trajectory.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="crypto-article">
+                <div class="article-content">
+                  <h2>
+                    AI Predicts Dogecoin Price After Trump's and Musk's Formal
+                    Oath
+                  </h2>
+                  <div class="article-image">
+                    <img
+                      src="assets/articles/dogecoin.webp"
+                      alt="Dogecoin price prediction"
+                    />
+                  </div>
+                  <div class="article-text">
+                    <p>
+                      Artificial Intelligence models suggest potential price
+                      movements for Dogecoin following significant statements
+                      from both Donald Trump and Elon Musk regarding
+                      cryptocurrency markets.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="education">
+          <div class="section-title">
+            <h2>Learn Crypto</h2>
+            <p>
+              Start your cryptocurrency journey with our educational resources
+            </p>
+          </div>
+
+          <div class="education-section">
+            <div class="education-container">
+              <div class="education-content">
+                <div class="learn-card">
+                  <h3>Getting Started with Crypto</h3>
+                  <p>
+                    Learn the fundamentals of cryptocurrency and blockchain
+                    technology.
+                  </p>
+                  <div class="topic-list">
+                    <details class="topic">
+                      <summary>What is Cryptocurrency?</summary>
+                      <div class="topic-content">
+                        <p>
+                          Cryptocurrency is a digital or virtual form of
+                          currency that uses cryptography for security. Unlike
+                          traditional currencies, cryptocurrencies are
+                          decentralized systems based on blockchain technology.
+                        </p>
+                      </div>
+                    </details>
+
+                    <details class="topic">
+                      <summary>Understanding Blockchain</summary>
+                      <div class="topic-content">
+                        <p>
+                          Blockchain is a distributed ledger technology that
+                          records all transactions across a network of
+                          computers. It's transparent, secure, and immutable.
+                        </p>
+                      </div>
+                    </details>
+
+                    <details class="topic">
+                      <summary>Types of Digital Assets</summary>
+                      <div class="topic-content">
+                        <p>
+                          Digital assets include cryptocurrencies (Bitcoin,
+                          Ethereum), tokens (utility, security), and NFTs
+                          (Non-Fungible Tokens).
+                        </p>
+                      </div>
+                    </details>
+
+                    <details class="topic">
+                      <summary>Security Best Practices</summary>
+                      <div class="topic-content">
+                        <p>
+                          Protect your investments using hardware wallets,
+                          strong passwords, two-factor authentication, and being
+                          aware of common scams.
+                        </p>
+                      </div>
+                    </details>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="crypto-glossary">
+                <h3>Crypto Terms</h3>
+                <div class="term-list">
+                  <div class="term">
+                    <h4>Blockchain</h4>
+                    <p>
+                      A digital ledger of transactions maintained across a
+                      network of computers.
+                    </p>
+                  </div>
+                  <div class="term">
+                    <h4>Mining</h4>
+                    <p>
+                      The process of validating and recording cryptocurrency
+                      transactions.
+                    </p>
+                  </div>
+                  <div class="term">
+                    <h4>Wallet</h4>
+                    <p>
+                      Digital storage for cryptocurrency assets and private
+                      keys.
+                    </p>
+                  </div>
+                </div>
+                <div class="glossary-image">
+                  <img
+                    src="assets/images/crypto.png"
+                    alt="Cryptocurrency illustration"
+                  />
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-about">
+            <h3>About Cryptocy</h3>
+            <p>
+              Your trusted source for cryptocurrency news, insights, and
+              real-time market data tracking.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#market">Market Updates</a></li>
+              <li><a href="#news">Latest News</a></li>
+              <li><a href="#education">Learn Crypto</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Follow Us</h3>
+            <div class="footer-social">
+              <a href="https://github.com/dawn-o"
+                ><img src="assets/icons/github.svg" alt="GitHub"
+              /></a>
+              <a href="https://linkedin.com/in/muhammad-rushelasli"
+                ><img src="assets/icons/linkedin.svg" alt="LinkedIn"
+              /></a>
+              <a href="mailto:contact@rushel.my.id"
+                ><img src="assets/icons/mail.svg" alt="Email"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 Cryptocy. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
